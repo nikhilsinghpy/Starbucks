@@ -11,20 +11,25 @@ html, html ul, html a, body {
 }
 :root{
     --main-color:#1b6953;
-    --second-main-color:#134d3c;
+    --second-main-color:#0f3f31;
     --icon-color:grey;
     --icon-text-colo:grey;
     --bg-color:white;
 }
-.container-fluid{
-    margin-top: 5rem;
+
+.container-fluid {
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
 }
+
 .header{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1rem 10%;
+    padding: .8rem 10%;
     background-color: var(--bg-color);
     display: flex;
     justify-content: space-between;
@@ -127,7 +132,64 @@ html, html ul, html a, body {
     
 }
 .notification{
+    background-color: var(--second-main-color);
+    color: white;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8rem;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+}
+.notification a{
+    color: var(--text-color);
+    background-color: transparent;
+    border: 1px solid white;
+    padding: .5rem 1rem;
+    border-radius: 5rem;
+    letter-spacing: 1px;
+    font-size: 1rem;
+}
+.notification a:hover{
+    background-color: var(--bg-color);
+    color: var(--second-main-color);
+    border-color: var(--second-main-color);
+}
+.menu-container{
+    padding: 1.8rem 2rem 2rem 8rem;
+    background-color:var(--bg-color);
+    height: auto;
+    width: 100%;
+    height: 300px;
+}
+.menu{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+}
+.menu-item{
+
+    margin-top: 2%;
+    width: 110px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menu-item h5{
+    margin-top: 10%;
+    /* color: white; */
+}
+.menu-image{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
 }
 @media  (max-width: 1333px)
 {
