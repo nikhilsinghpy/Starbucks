@@ -11,9 +11,13 @@ html, html ul, html a, body {
 }
 :root{
     --main-color:#1b6953;
+    --second-main-color:#134d3c;
     --icon-color:grey;
     --icon-text-colo:grey;
     --bg-color:white;
+}
+.container-fluid{
+    margin-top: 5rem;
 }
 .header{
     position: fixed;
@@ -27,6 +31,7 @@ html, html ul, html a, body {
     align-items: center;
     z-index: 100;
     transition: .3s;
+    border-bottom: 1px solid black;
 }
 .logo{
     max-width: 40px;
@@ -120,6 +125,9 @@ html, html ul, html a, body {
 {
     display: none;
     
+}
+.notification{
+
 }
 @media  (max-width: 1333px)
 {
