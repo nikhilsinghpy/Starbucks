@@ -195,7 +195,9 @@ html, html ul, html a, body {
 .recommends-section{
 
     width: 100%;
+    height: 60vh;
     padding: 1rem 7rem;
+    margin-bottom:5rem ;
 }
 .content{
     width: 100%;
@@ -210,28 +212,73 @@ html, html ul, html a, body {
     letter-spacing: 1px;
 
 }
-.slider{
-    background-color: antiquewhite;
+.slider-container{
+    background-color: #1b6953;
     width: 100%;
-    height: auto;
-    padding: 0 0 2rem 0;
+    height: 50vh;
     position: relative;
-}
-.slider-item{
-    max-width: 300px;
-    max-height: 200px;
-}
-.slider-item .imge1{
-    width: 15vw;
-    height: 15vh;
-    border-radius: 5rem;
     overflow: hidden;
 }
-.slider-item .img1{
+.slide{
+    position: absolute;
+    transition: 1s all;
+}
+.food-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 400px;
     width: 100%;
-    height: 100%;
-    object-fit: contain;
-   
+    display: flex; 
+    padding: 1rem;
+    border: .5px solid rgba(104, 103, 103, 0.815);
+    transition: transform 0.5s ease; /* Adjusted the transition duration */
+}
+
+.food-image {
+    max-width: 100px;
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    transition: transform 0.5s ease-in-out;
+}
+
+.food-details {
+    padding-left: 1rem;
+}
+
+.food-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1%;
+}
+
+.food-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.food-price {
+    font-size: 1rem;
+    font-weight: bold;
+    gap: 2rem;
+    align-items: center;
+}
+
+.food-price span {
+    float: right;
+}
+
+.btn2 {
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
 }
 
 @media  (max-width: 1333px)
