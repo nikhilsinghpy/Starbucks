@@ -195,14 +195,15 @@ html, html ul, html a, body {
 .recommends-section{
 
     width: 100%;
-    height: 60vh;
-    padding: 1rem 7rem;
-    margin-bottom:5rem ;
+    height: auto;
+    background-color: gainsboro;
+    padding: 1rem 4rem;
 }
 .content{
     width: 100%;
     display: flex;
     align-items: center;
+    padding: 0 1rem;
     justify-content: space-between;
     margin-bottom: 2%;
 }
@@ -212,19 +213,39 @@ html, html ul, html a, body {
     letter-spacing: 1px;
 
 }
-.slider-container{
-    background-color: #1b6953;
+.swiper {
     width: 100%;
-    height: 50vh;
-    position: relative;
-    overflow: hidden;
-}
-.slide{
-    position: absolute;
-    transition: 1s all;
+    height: auto;
+    
+  }
+  .innser-slide{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .swiper-slide{
+    color: white;
+   padding: 1.5rem;
+   display: flex;
+   flex-direction: row;
+  }
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    display: none;
+}  
+.swiper-button-next i,
+.swiper-button-prev i{
+    color: var(--main-color) !important;
+    font-size: 2rem;
+    background-color: white;
+    border-radius: 50%;
+    padding: .4rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+
 }
 .food-card {
     background-color: #fff;
+    color: rgb(59, 57, 57);
     border-radius: 8px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -253,12 +274,12 @@ html, html ul, html a, body {
     font-size: 1rem;
     font-weight: bold;
     margin-bottom: 1%;
+    color: black;
 }
 
 .food-description {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 10px;
+    font-size: .7rem;
+    margin-bottom: 1rem;
 }
 
 .food-price {
@@ -269,7 +290,7 @@ html, html ul, html a, body {
 }
 
 .food-price span {
-    float: right;
+    margin-right: 5rem;
 }
 
 .btn2 {
@@ -279,6 +300,67 @@ html, html ul, html a, body {
     border: none;
     outline: none;
     background-color: var(--main-color);
+    cursor: pointer;
+}
+/* csss for normal slider */
+
+.card {
+    background-color: #fff;
+    color: rgb(59, 57, 57);
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 400px;
+    width: 100%;
+    padding: 1rem;
+    border: .5px solid rgba(104, 103, 103, 0.815);
+    transition: transform 0.5s ease; /* Adjusted the transition duration */
+}
+
+.card-image {
+    max-width: 100px;
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card-details {
+    padding-left: 1rem;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1%;
+    color: black;
+}
+
+.card-description {
+    font-size: .7rem;
+    margin-bottom: 1rem;
+}
+
+.card-price {
+    font-size: 1rem;
+    font-weight: bold;
+    gap: 2rem;
+    align-items: center;
+}
+
+.card-price span {
+    margin-right: 5rem;
+}
+
+.btn2 {
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
+    cursor: pointer;
 }
 
 @media  (max-width: 1333px)
