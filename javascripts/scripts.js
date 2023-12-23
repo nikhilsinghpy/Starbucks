@@ -1,37 +1,42 @@
 
-// $(document).ready(function() {
-//     $('#menu').click(function() {
-//       $(this).toggleClass('bx-x');
-//       $('.navlink').toggleClass('active');
-//     });
-//     });
 
 function displaynavbar(){
   var menu = document.getElementById("menu");
   menu.classList.toggle("bx-x");
   var navlinks = document.querySelector('.navlink');
   navlinks.classList.toggle("active")
-  // var nav = document.getElementsByClassName()
 }    
 
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'horizontal',
+
+var swiper = new Swiper(".slide-content", {
+  slidesPerView: 4,
+  spaceBetween: 25,
   loop: true,
-
-  // If we need pagination
+  centerSlide: 'true',
+  fade: 'true',
+  grabCursor: 'true',
   pagination: {
-    el: '.swiper-pagination',
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
   },
-
-  // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
+  breakpoints:{
+      0: {
+          slidesPerView: 1,
+      },
+      520: {
+          slidesPerView: 2,
+      },
+      720: {
+        slidesPerView: 3,
+      },
+      950: {
+          slidesPerView: 4,
+      },
   },
 });
