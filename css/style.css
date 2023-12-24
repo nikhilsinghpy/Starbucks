@@ -594,8 +594,16 @@ footer .container .col{
         width: 80px;
         height: 100px;
      }
-
-
+     footer .container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        
+    }
+    footer .container .col{
+    
+        width: 100%;
+    }
 }
 @media screen and (max-width: 425px) {
     .menu{
@@ -609,7 +617,18 @@ footer .container .col{
         width: 80px;
         height: 100px;
     }
-}  
+    footer .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        
+    }
+    footer .container .col{
+    
+        width: 100%;
+    }
+    
+}   
 @media screen and (max-width: 320px) {
 
     .slide-content{
@@ -652,7 +671,7 @@ footer .container .col{
     }
     .logo{
         width: 30px;
-        height: 0px;
+        height: 30px;
     }
     .swiper-button-next,
     .swiper-button-prev{
